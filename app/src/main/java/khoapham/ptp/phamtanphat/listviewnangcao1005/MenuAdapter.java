@@ -43,7 +43,8 @@ public class MenuAdapter extends BaseAdapter {
         TextView txtGiamonan = convertView.findViewById(R.id.textviewGiamenu);
         ImageView imgMonan = convertView.findViewById(R.id.imageviewMenu);
 
-//        Menu menu = (Menu) getItem(position);
+
+//        Menu menu = mangmenu.get(position);
         Menu menu = (Menu) getItem(position);
         txtTenmonan.setText(menu.getTen());
         txtGiamonan.setText(menu.getGia() + " Đ");
