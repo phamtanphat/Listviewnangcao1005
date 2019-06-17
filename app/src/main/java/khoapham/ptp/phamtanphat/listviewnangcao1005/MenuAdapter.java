@@ -24,8 +24,9 @@ public class MenuAdapter extends BaseAdapter {
     }
 
     @Override
-    public Object getItem(int position) {
-        return null;
+    public Object getItem(int position)
+    {
+        return mangmenu.get(position);
     }
 
     @Override
@@ -42,7 +43,11 @@ public class MenuAdapter extends BaseAdapter {
         TextView txtGiamonan = convertView.findViewById(R.id.textviewGiamenu);
         ImageView imgMonan = convertView.findViewById(R.id.imageviewMenu);
 
-        txtTenmonan.setText("AAAA");
+//        Menu menu = (Menu) getItem(position);
+        Menu menu = (Menu) getItem(position);
+        txtTenmonan.setText(menu.getTen());
+        txtGiamonan.setText(menu.getGia() + " Đ");
+        imgMonan.setImageResource(menu.getHinhanh());
         return convertView;
     }
 }
