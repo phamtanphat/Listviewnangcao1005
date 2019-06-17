@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -35,6 +37,12 @@ public class MenuAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
         convertView = layoutInflater.inflate(R.layout.dong_item_menu,null);
-        return null;
+
+        TextView txtTenmonan = convertView.findViewById(R.id.textviewTenmenu);
+        TextView txtGiamonan = convertView.findViewById(R.id.textviewGiamenu);
+        ImageView imgMonan = convertView.findViewById(R.id.imageviewMenu);
+
+        txtTenmonan.setText("AAAA");
+        return convertView;
     }
 }
