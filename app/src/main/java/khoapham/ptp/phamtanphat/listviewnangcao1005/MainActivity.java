@@ -25,5 +25,7 @@ public class MainActivity extends AppCompatActivity {
         menuArrayList.add(new Menu(5,"Trà sữa socola",55000,R.drawable.trasuasocola));
         menuArrayList.add(new Menu(6,"Trà sữa trà xanh",60000 ,R.drawable.trasuatraxanh));
         menuArrayList.add(new Menu(7,"Tráng miệng",70000 ,R.drawable.trangmien));
+        menuAdapter = new MenuAdapter(menuArrayList,MainActivity.this);
+        lvMenu.setAdapter(menuAdapter);
     }
 }
